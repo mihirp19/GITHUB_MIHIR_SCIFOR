@@ -1,0 +1,17 @@
+Q1: What is CSS? What are the different types of selectors in CSS?
+	-> Cascading style sheets are designed to style the page created in HTML.
+	-> Selectors in CSS are:
+		1) Element selectors: selected by the tag names
+		2) Class selectors: selected by the class name of the element
+		3) ID selectors: selected by the ID of the element
+		4) Pseudo-Class selectors: for adding the effects on the element. e.g. :hover
+		5) Pseudo-Element selectors: for adding at specific points in the page. e.g. ::before, ::after
+
+Q2: What is CSS Box Model?
+	-> It is a concept in web design that defines how the elements will be placed and positioned on the page. Margin, Padding, Border, Content are the 4 parts of CSS Box Model.
+
+Q4: Define the list types in HTML.
+	-> There are a few list types in HTML:
+		1) Un-Ordered List: e.g. bullet points
+		2) Ordered List: e.g. numbers/alphabets
+		3) Description List: e.g. description list <dl> defining term <dt> and description <dd>
