@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            background-color: #fff;
+            justify-content: center;
+            align-items: center;
+            height: 50vh;
+        }
+        form{
+            padding: 20px;
+            border: 3px solid lightgreen;
+            background: lightyellow;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .formDiv{
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+        }
+
+        input{
+            margin: 5px;
+            border-radius: 5px;
+            height: 25px;
+            padding: 5px;
+            width: 100%;
+        }
+
+        button{
+            background-color: lightsalmon;
+            margin: 0 auto;
+            display: flex;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input:focus{
+            border-color: #000000;
+        }
+
+        input:valid {
+            border-color: #28a745;
+        }
+        input:invalid {
+            border-color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <form method="get">
+        <div class="formDiv">
+            <input type="text" name="username" minlength="4" maxlength="10" placeholder="UserName" required>
+            <input type="email" name="email" minlength="8" placeholder="Email" required>
+            <input type="number" name="age" min="18" max="100" placeholder="Age" required>
+            <input type="text" name="zipcode" placeholder="ZipCode" pattern="\d{5}" required>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
