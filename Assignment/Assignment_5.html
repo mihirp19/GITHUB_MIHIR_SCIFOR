@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form and Table</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"></script>
+</head>
+<body>
+    <div class="grid-container">
+        <h1>Registration Form</h1>
+        <form>
+            <div class="grid-x grid-padding-x">
+                <div class="medium-4 cell">
+                    <label>Name
+                        <input type="text" placeholder="Enter your name" required>
+                    </label>
+                </div>
+                <div class="medium-4 cell">
+                    <label>Email
+                        <input type="email" placeholder="Enter your email" required>
+                    </label>
+                </div>
+                <div class="medium-4 cell">
+                    <label>Password
+                        <input type="password" placeholder="Enter your password" required>
+                    </label>
+                </div>
+            </div>
+
+            <fieldset class="fieldset">
+                <legend>Gender</legend>
+                <input type="radio" name="gender" value="male" id="male"><label for="male">Male</label>
+                <input type="radio" name="gender" value="female" id="female"><label for="female">Female</label>
+            </fieldset>
+
+            <fieldset class="fieldset">
+                <legend>Interests</legend>
+                <input type="checkbox" id="sports" value="sports"><label for="sports">Sports</label>
+                <input type="checkbox" id="music" value="music"><label for="music">Music</label>
+                <input type="checkbox" id="reading" value="reading"><label for="reading">Reading</label>
+                <input type="checkbox" id="travelling" value="travelling"><label for="travelling">Travelling</label>
+            </fieldset>
+
+            <div class="cell">
+                <button type="submit" class="button large">Submit</button>
+            </div>
+        </form>
+
+        <h3>User Information</h3>
+        <table class="striped hover scrollable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Gender</th>
+                    <th>Country</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Mihir</td>
+                    <td>mihir@email.com</td>
+                    <td>Male</td>
+                    <td>India</td>
+                </tr>
+                <tr>
+                    <td>Lay</td>
+                    <td>lay@email.com</td>
+                    <td>Male</td>
+                    <td>India</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
