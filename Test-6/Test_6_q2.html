@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test-6-Q2</title>
+</head>
+<body>
+    <script>
+        var str1 = "Mihir";
+        let str2 = "Panchal";
+        const str3 = "Test";
+
+        document.writeln(str1);
+        document.writeln(str2);
+        document.writeln(str3);
+        document.write("<br>");
+        document.write("<br>");
+
+        function scopeDemo(){
+            var outBlock = "VarOutScope";
+            let outBlock2 = "LetOutScope";
+
+            if(true){
+                var InBlock = "VarInBlock";
+                let InBlock2 = "LetInBlock";
+
+                document.write(InBlock);
+                document.write(InBlock2);
+                document.write("<br>");
+                document.write(outBlock);
+                document.write(outBlock2);
+                document.write("<br>");
+            }
+            
+            document.write(InBlock);
+            document.write(InBlock2);
+            document.write("<br>");
+            document.write(outBlock);
+            document.write(outBlock2);
+        }
+        scopeDemo();
+    </script>
+</body>
+</html>
