@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-3</title>
+</head>
+<body>
+    <script>
+function checkVotingEligibility() {
+            let age = parseInt(prompt("Enter the age"));
+            if (isNaN(age)) {
+                document.write("That's not a valid age.");
+            } else {
+                let result = (age >= 18) ? "Eligible to vote" : "Not eligible to vote";
+                document.write(result);
+            }
+        }
+        checkVotingEligibility();
+    </script>
+</body>
+</html>

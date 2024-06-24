@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-1</title>
+</head>
+<body>
+    <script>
+         function determineNumberType() {
+            let number = prompt("Enter a number:");
+
+            if (isNaN(number)) {
+                document.write("That's not a valid number.");
+            } else if (number > 0) {
+                document.write("The number is positive.");
+            } else if (number < 0) {
+                document.write("The number is negative.");
+            } else {
+                document.write("The number is zero.");
+            }
+        }
+        determineNumberType();
+    </script>
+</body>
+</html>
