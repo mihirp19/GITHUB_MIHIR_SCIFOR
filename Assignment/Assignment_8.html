@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-8</title>
+</head>
+<body>
+    <script>
+        function Add(a,b){
+            return a+b;
+        }
+        function Sub(a,b){
+            return a-b;
+        }
+        function Multiply(a,b){
+            return a*b;
+        }
+        function Divide(a,b){
+            if(b===0){
+                return "Error";
+            }else{
+                return a/b;
+            }
+        }
+        let num1 = parseFloat(prompt("Enter the first number"));
+        let num2 = parseFloat(prompt("Enter the second number"));
+        let oper = prompt("Enter the operation you want to perform");
+        let res;
+        switch(oper){
+            case "+":
+                res = Add(num1, num2);
+                break;
+            case "-":
+                res = Sub(num1, num2);
+                break;
+            case "*":
+                res = Multiply(num1, num2);
+                break;
+            case "/":
+                res = Divide(num1, num2);
+                break;
+            default:
+                res = "Invalid";
+                break;
+        }
+        document.write("Result: " + res);
+    </script>
+</body>
+</html>
