@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Question-2</title>
+</head>
+<body>
+
+<script>
+    function countCharacters(arr) {
+        let charCount = {};
+        arr.forEach(char => {
+            charCount[char] = (charCount[char] || 0) + 1;
+        });
+        return charCount;
+    }
+
+    let inputArray = ["m","i","h","i","r"];
+    let characterCounts = countCharacters(inputArray);
+    document.write("Character Counts:", characterCounts); 
+</script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-5</title>
+</head>
+<body>
+    <script>
+        function manipulateArray(arr){
+            arr.push("volvo");
+            arr.pop();
+            
+            for(let i=0;i<arr.length;i++){
+                arr[i] = arr[i].toUpperCase();
+            }
+            
+            let strJoin = arr.join(", ");
+            return strJoin;
+        }
+        let arr = ["bmw","mercedes","audi"];
+        let manipulatedStr = manipulateArray(arr);
+        document.write(arr);
+    </script>
+</body>
+</html>

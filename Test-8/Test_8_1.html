@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-1</title>
+</head>
+<body>
+    <script>
+        function changeDate(date) {
+            var currentMonth = date.getMonth();
+            date.setMonth(currentMonth + 1);
+            date.setDate(15);
+
+            var adjustedYear = date.getFullYear();
+            return date;
+        }
+    
+        var dt = new Date();
+        var adjustedDate = changeDate(dt);
+        var adjustedYear = adjustedDate.getFullYear();
+        
+        document.write("Adjusted Date: " + adjustedDate + "<br>");
+        document.write("Adjusted Year: " + adjustedYear);
+    </script>
+    
+</body>
+</html>
