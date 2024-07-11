@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <a class="navbar-brand" href="#">Mihir Panchal</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>    
+
+    <section id="about" class="container">
+      <h1 class="text-center fw-bold">About Me</h1>
+      <div class="row">
+        <div class="col-12">
+          <hr />
+        </div>
+        <div class="col-md-4">
+          <img
+            src="./20230112_170446.jpg"
+            alt="Your Photo"
+            class="profile-photo"
+          />
+        </div>
+        <div class="col-md-8">
+          <p class="about-para">
+            I am a fresher learning the MERN Stack, with a passion for travel,
+            reading books, and photography. I'm excited to build dynamic web
+            applications and capture beautiful moments through my lens.
+          </p>
+          <div class="cv-btn">
+            <a href="./Mihir Panchal.pdf" class="btn" target="_blank"
+              >Download Resume</a
+            >
+          </div>
+        </div>
+      </div>
+      <hr />
+      <h2><i class="fa-solid fa-code mx-2"></i>Skills</h2>
+      <div class="skills-container">
+        <div class="skill-card">
+          <i class="fa-brands fa-html5"></i>
+          <h3>HTML</h3>
+        </div>
+        <div class="skill-card">
+          <i class="fa-brands fa-css3-alt"></i>
+          <h3>CSS</h3>
+        </div>
+        <div class="skill-card">
+          <i class="fa-brands fa-js"></i>
+          <h3>JavaScript</h3>
+        </div>
+        <div class="skill-card">
+          <i class="fa-brands fa-react"></i>
+          <h3>ReactJS</h3>
+        </div>
+        <div class="skill-card">
+          <i class="fa-brands fa-node-js"></i>
+          <h3>NodeJS</h3>
+        </div>
+        <div class="skill-card">
+            <i class="fa-solid fa-database"></i>
+          <h3>SQL</h3>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="container">
+      <h2>Projects</h2>
+      <hr />
+      <div class="row">
+        <div class="col-md-4 mx-3 project">
+          <h3>Crypsion</h3>
+          <p>
+            Web3 project using ReactJS and Solidity with MetaMask as
+            Authentication.
+          </p>
+        </div>
+        <div class="col-md-4 mx-3 project">
+          <h3>PokeDex</h3>
+          <p>Pokedex using ReactJS and API fetching.</p>
+        </div>
+        <div class="col-md-4 mx-3 project">
+          <h3>Forums App</h3>
+          <p>
+            Forums App for discussions as per topics using ReactJS, NodeJS,
+            MongoDB and ExpressJS.
+          </p>
+        </div>
+        <div class="col-md-4 mx-3 project">
+          <h3>Library Management System</h3>
+          <p>A Library management system using Kotlin and Android Studio.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="container">
+        <div class="row">
+            <div class="col">
+                <div class="container">
+                    <h2>Connect with Me</h2>
+                    <div class="social-links">
+                      <a href="mailto:mihir6602@gmail.com" class="text-white mx-2"><i class="fas fa-envelope"></i></a>
+                      <a href="https://www.linkedin.com/in/mihir-panchal19/" target="_blank" class="text-white mx-2"><i class="fab fa-linkedin"></i></a>
+                      <a href="https://github.com/mihirp19" target="_blank" class="text-white mx-2"><i class="fab fa-github"></i></a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col">
+                <h2>Contact</h2>
+                <form id="contact-form">
+                  <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control"  id="email" name="email"  required />
+                  </div>
+                  <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" class="form-control" id="subject" name="subject" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" id="message" name="message"  rows="4" required ></textarea>
+                  </div>
+                  <button type="submit" class="btn">Submit</button>
+                </form>
+            </div>
+        </div>      
+    </section>
+
+    <footer class="bg-dark text-center text-white py-4">
+      2024 &copy; Mihir Panchal
+    </footer>
+
+    <button id="back-to-top" class="btn btn-secondary">
+      <i class="fas fa-arrow-up"></i> Back to Top
+    </button>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
