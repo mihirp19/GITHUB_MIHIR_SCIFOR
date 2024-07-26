@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Context API Increment/Decrement</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      // Context cration:creates new context object names countercontext.
+      //this context are used to share the state between the components without using props.
+      const CounterContext = React.createContext();
+
+      // Context provider:
+      // defines function counterprovider which accepts children as props
+      function CounterProvider({ children }) {
+        //uses usestate hook to crette a state variable count initialized to 0.
+        //function setcount update it.
+        const [count, setCount] = React.useState(0);
+        const increment = () => setCount(count + 1);
+        const decrement = () => setCount(count - 1);
+        //it uses provider component from CounterContext to pass the count,increment,decrement to childern and any other nested component
+        return (
+          <CounterContext.Provider value={{ count, increment, decrement }}>
+            {children}
+          </CounterContext.Provider>
+        );
+      }
+
+      // Consumer component
+      //defines function component named CounterDisplay()
+      //uses the useContext hook to access count from countercontext
+      function CounterDisplay() {
+        const { count } = React.useContext(CounterContext);
+        return <h1>Count: {count}</h1>;
+      }
+      //defines functional component named countercontrols
+      //uses useContext to acess increment and decrement from countercontext
+      function CounterControls() {
+        const { increment, decrement } = React.useContext(CounterContext);
+
+        return (
+          <div>
+            <button onClick={increment}>Increment</button>
+            <button onClick={decrement}>Decrement</button>
+          </div>
+        );
+      }
+      //defines main application component named app
+      //wraps entire application in counterorovider to provide the context to all nested comoponents.
+      //renders a heading for the application
+      //renders counterdisplay() & countercontrols
+      //rendesrs counter provider
+      function App() {
+        return (
+          <CounterProvider>
+            <div>
+              <h1>Counter</h1>
+              <CounterDisplay />
+              <CounterControls />
+            </div>
+          </CounterProvider>
+        );
+      }
+      //render the app component in div with id root
+      ReactDOM.render(<App />, document.getElementById("root"));
+    </script>
+  </body>
+</html>
