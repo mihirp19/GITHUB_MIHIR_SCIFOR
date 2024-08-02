@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-13</title>
+</head>
+<body>
+    <h1>Division</h1>
+    <p>Res 1: <span id="res1"></span></p>
+    <p>Res 2: <span id="res2"></span></p>
+    <script>
+        function divide(a,b){
+            try{
+                if(b===0){
+                    console.error("Can't divide by 0");
+                }
+                return a/b;
+            }catch(err){
+                console.error(err.message);
+            }
+        }
+        document.getElementById('res1').innerHTML=(divide(10,2));
+        document.getElementById('res2').innerHTML=(divide(20,0));
+    </script>
+</body>
+</html>

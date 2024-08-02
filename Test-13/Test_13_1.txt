@@ -1,0 +1,4 @@
+A RESTful API also called Representational State Transfer Application Programming Interface is an architectural style for designing networked applications.
+It relies on a stateless, client-server, cacheable communications protocol — the HTTP.
+RESTful APIs are used to enable interaction between different systems over the web.
+Common methods in RESTful API are: GET, POST, PUT, DELETE

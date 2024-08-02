@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-2</title>
+</head>
+<body>
+    <input type="number" id="num1" placeholder="Enter the number"><br>
+    <input type="number" id="num2" placeholder="Enter the number"><br>
+    <button onclick="divideNumber()">Divide</button>
+    <p id="res"></p>
+    <script>
+        function divideNumber(){
+            try{
+                let num1 = parseInt(document.getElementById('num1').value);
+                let num2 = parseInt(document.getElementById('num2').value);
+
+                if(isNaN(num1) || isNaN(num2)){
+                    console.error("Not a number");
+                }
+                if(num2===0){
+                    throw new Error("Division Not possible");
+                }
+                let res = num1/num2;
+                document.getElementById('res').innerHTML = `The result is: ${res}`;
+            }catch(error){
+                document.getElementById('res').innerHTML = error.message;
+            }
+        }
+    </script>
+</body>
+</html>
